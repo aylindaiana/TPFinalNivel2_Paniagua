@@ -1,0 +1,6 @@
+C:\Users\aapan\source\repos\dominio\domino\bin\Debug\domino.dll
+C:\Users\aapan\source\repos\dominio\domino\bin\Debug\domino.pdb
+C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.csproj.AssemblyReference.cache
+C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.csproj.CoreCompileInputs.cache
+C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.dll
+C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.pdb

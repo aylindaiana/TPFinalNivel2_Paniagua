@@ -1,0 +1,6 @@
+C:\Users\aapan\source\repos\dominio\negocio\bin\Debug\negocio.dll
+C:\Users\aapan\source\repos\dominio\negocio\bin\Debug\negocio.pdb
+C:\Users\aapan\source\repos\dominio\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\aapan\source\repos\dominio\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\aapan\source\repos\dominio\negocio\obj\Debug\negocio.dll
+C:\Users\aapan\source\repos\dominio\negocio\obj\Debug\negocio.pdb
