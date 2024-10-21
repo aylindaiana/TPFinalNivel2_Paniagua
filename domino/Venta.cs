@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace domino
 {
-    public class Categoria
+    public class Venta
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
-
-        public override string ToString()
-        {
-            return Descripcion;
-        }
+        public DateTime FechaVenta { get; set; }
+        public int Total { get; set; }
     }
 }

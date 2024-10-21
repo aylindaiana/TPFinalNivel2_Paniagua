@@ -13,7 +13,7 @@ namespace negocio
 
         private SqlCommand comando;
         private SqlDataReader lector;
-        private string consulta; //aca guarda la consulta a llamar
+
 
         public SqlDataReader Lector
         {
@@ -21,7 +21,7 @@ namespace negocio
         }
         public AccesoDatos() //creo su constructor
         {
-            conexion = new SqlConnection("server=¨.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
             comando = new SqlCommand();
         }
         public void SetearConsulta(string Consulta)

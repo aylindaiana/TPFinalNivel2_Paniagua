@@ -21,3 +21,11 @@ C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\obj\Debug
 C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\obj\Debug\TPFinalNivel2_Paniagua.csproj.CoreCompileInputs.cache
 C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\obj\Debug\TPFinalNivel2_Paniagua.exe
 C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\obj\Debug\TPFinalNivel2_Paniagua.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\TPFinalNivel2_Paniagua.exe.config
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\TPFinalNivel2_Paniagua.exe
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\TPFinalNivel2_Paniagua.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\domino.dll
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\negocio.dll
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\domino.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\bin\Debug\negocio.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\TPFinalNivel2_Paniagua\obj\Debug\TPFinalN.3F37EA10.Up2Date

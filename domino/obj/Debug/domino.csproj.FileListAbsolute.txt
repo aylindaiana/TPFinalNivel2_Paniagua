@@ -4,3 +4,9 @@ C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.csproj.AssemblyRefer
 C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.csproj.CoreCompileInputs.cache
 C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.dll
 C:\Users\aapan\source\repos\dominio\domino\obj\Debug\domino.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\obj\Debug\domino.csproj.AssemblyReference.cache
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\obj\Debug\domino.csproj.CoreCompileInputs.cache
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\obj\Debug\domino.dll
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\obj\Debug\domino.pdb
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\bin\Debug\domino.dll
+C:\Users\aapan\Downloads\TPFinalNivel2_Paniagua\domino\bin\Debug\domino.pdb

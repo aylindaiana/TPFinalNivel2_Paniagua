@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pbxImagen = new System.Windows.Forms.PictureBox();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.pbxArticuloImagen = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
@@ -44,26 +44,37 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.txbBusqueda = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
+            this.lblDescNombre = new System.Windows.Forms.Label();
+            this.lblDescMarca = new System.Windows.Forms.Label();
+            this.lblDescPrecio = new System.Windows.Forms.Label();
+            this.lblDescCodigo = new System.Windows.Forms.Label();
+            this.lblDescDescripcion = new System.Windows.Forms.Label();
+            this.lblDescCateg = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvArticulos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 136);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(573, 132);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvArticulos.Location = new System.Drawing.Point(55, 136);
+            this.dgvArticulos.MultiSelect = false;
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArticulos.Size = new System.Drawing.Size(559, 132);
+            this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // pbxImagen
+            // pbxArticuloImagen
             // 
-            this.pbxImagen.Location = new System.Drawing.Point(687, 87);
-            this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(221, 225);
-            this.pbxImagen.TabIndex = 1;
-            this.pbxImagen.TabStop = false;
+            this.pbxArticuloImagen.Location = new System.Drawing.Point(660, 108);
+            this.pbxArticuloImagen.Name = "pbxArticuloImagen";
+            this.pbxArticuloImagen.Size = new System.Drawing.Size(200, 160);
+            this.pbxArticuloImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticuloImagen.TabIndex = 1;
+            this.pbxArticuloImagen.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -73,6 +84,7 @@
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnActualizar
             // 
@@ -116,13 +128,13 @@
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             // 
             // opcionSalidaToolStripMenuItem
@@ -136,7 +148,7 @@
             // carrarPestañaToolStripMenuItem
             // 
             this.carrarPestañaToolStripMenuItem.Name = "carrarPestañaToolStripMenuItem";
-            this.carrarPestañaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.carrarPestañaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.carrarPestañaToolStripMenuItem.Text = "Carrar Pestaña";
             // 
             // sobreLaAppToolStripMenuItem
@@ -162,6 +174,7 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
             // lblBusqueda
             // 
@@ -180,11 +193,77 @@
             this.txbBusqueda.Size = new System.Drawing.Size(378, 20);
             this.txbBusqueda.TabIndex = 9;
             // 
+            // lblDescNombre
+            // 
+            this.lblDescNombre.AutoSize = true;
+            this.lblDescNombre.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescNombre.Location = new System.Drawing.Point(657, 284);
+            this.lblDescNombre.Name = "lblDescNombre";
+            this.lblDescNombre.Size = new System.Drawing.Size(54, 14);
+            this.lblDescNombre.TabIndex = 10;
+            this.lblDescNombre.Text = "nombre";
+            // 
+            // lblDescMarca
+            // 
+            this.lblDescMarca.AutoSize = true;
+            this.lblDescMarca.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescMarca.Location = new System.Drawing.Point(168, 325);
+            this.lblDescMarca.Name = "lblDescMarca";
+            this.lblDescMarca.Size = new System.Drawing.Size(44, 14);
+            this.lblDescMarca.TabIndex = 11;
+            this.lblDescMarca.Text = "marca";
+            // 
+            // lblDescPrecio
+            // 
+            this.lblDescPrecio.AutoSize = true;
+            this.lblDescPrecio.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescPrecio.Location = new System.Drawing.Point(804, 284);
+            this.lblDescPrecio.Name = "lblDescPrecio";
+            this.lblDescPrecio.Size = new System.Drawing.Size(47, 14);
+            this.lblDescPrecio.TabIndex = 12;
+            this.lblDescPrecio.Text = "precio";
+            // 
+            // lblDescCodigo
+            // 
+            this.lblDescCodigo.AutoSize = true;
+            this.lblDescCodigo.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescCodigo.Location = new System.Drawing.Point(76, 294);
+            this.lblDescCodigo.Name = "lblDescCodigo";
+            this.lblDescCodigo.Size = new System.Drawing.Size(51, 14);
+            this.lblDescCodigo.TabIndex = 13;
+            this.lblDescCodigo.Text = "codigo";
+            // 
+            // lblDescDescripcion
+            // 
+            this.lblDescDescripcion.AutoSize = true;
+            this.lblDescDescripcion.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescDescripcion.Location = new System.Drawing.Point(305, 294);
+            this.lblDescDescripcion.Name = "lblDescDescripcion";
+            this.lblDescDescripcion.Size = new System.Drawing.Size(81, 14);
+            this.lblDescDescripcion.TabIndex = 14;
+            this.lblDescDescripcion.Text = "descripcion";
+            // 
+            // lblDescCateg
+            // 
+            this.lblDescCateg.AutoSize = true;
+            this.lblDescCateg.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescCateg.Location = new System.Drawing.Point(457, 325);
+            this.lblDescCateg.Name = "lblDescCateg";
+            this.lblDescCateg.Size = new System.Drawing.Size(66, 14);
+            this.lblDescCateg.TabIndex = 15;
+            this.lblDescCateg.Text = "categoria";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 450);
+            this.Controls.Add(this.lblDescCateg);
+            this.Controls.Add(this.lblDescDescripcion);
+            this.Controls.Add(this.lblDescCodigo);
+            this.Controls.Add(this.lblDescPrecio);
+            this.Controls.Add(this.lblDescMarca);
+            this.Controls.Add(this.lblDescNombre);
             this.Controls.Add(this.txbBusqueda);
             this.Controls.Add(this.lblBusqueda);
             this.Controls.Add(this.btnEliminar);
@@ -192,14 +271,15 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.pbxImagen);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pbxArticuloImagen);
+            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticuloImagen)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -209,8 +289,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pbxImagen;
+        private System.Windows.Forms.DataGridView dgvArticulos;
+        private System.Windows.Forms.PictureBox pbxArticuloImagen;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnAlta;
@@ -225,6 +305,12 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblBusqueda;
         private System.Windows.Forms.TextBox txbBusqueda;
+        private System.Windows.Forms.Label lblDescNombre;
+        private System.Windows.Forms.Label lblDescMarca;
+        private System.Windows.Forms.Label lblDescPrecio;
+        private System.Windows.Forms.Label lblDescCodigo;
+        private System.Windows.Forms.Label lblDescDescripcion;
+        private System.Windows.Forms.Label lblDescCateg;
     }
 }
 
