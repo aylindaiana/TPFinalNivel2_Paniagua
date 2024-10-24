@@ -22,16 +22,16 @@ namespace TPFinalNivel2_Paniagua
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            FrmAgregar nuevo = new FrmAgregar();
+            FrmAgregarActualizar nuevo = new FrmAgregarActualizar();
             nuevo.ShowDialog();
             cargarGrilla();
 
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            //this.ClientSize = new System.Drawing.Size(805, 545);
+
             cargarGrilla();
-            //cboxCampo.Items.Add("Nombre");
+            //cbxCampo.Items.Add("Nombre");
             //cboxCampo.Items.Add("Marca");
             //cboxCampo.Items.Add("Precio");
             //cboxCampo.Items.Add("Categoria");
@@ -71,11 +71,11 @@ namespace TPFinalNivel2_Paniagua
             }
             catch (Exception)
             {
-                pbxArticuloImagen.Load("https://faculty.eng.ufl.edu/elliot-douglas/wp-content/uploads/sites/70/2015/11/img-placeholder.png");
+                pbxArticuloImagen.Load("https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg");
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click(object sender, EventArgs e)
         {
             if (listaArticulo.Count > 0 && (dgvArticulos.CurrentRow == null))
             {
@@ -85,8 +85,8 @@ namespace TPFinalNivel2_Paniagua
             if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.DataBoundItem != null)
             {
                 Articulo modificable = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                //  FrmAgregar editar = new FrmAgregar(modificable);
-                //editar.ShowDialog();
+                FrmAgregarActualizar actualizar = new FrmAgregarActualizar(modificable);
+                actualizar.ShowDialog();
                 cargarGrilla();
             }
             else
@@ -151,11 +151,6 @@ namespace TPFinalNivel2_Paniagua
             return false;
         }
 
-        private void btnEliminar_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void validarCeldaSelec()
         {
@@ -203,6 +198,205 @@ namespace TPFinalNivel2_Paniagua
             validarCeldaSelec();
         }
 
+        /*
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            filtroAv();
+        }*/
+        /*
+        private void txtboxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            //No inicializo el obj lista antes ya que la Lista se genera en el FindAll
 
+            string filtro = txbBusqueda.Text; //donde es txtbxFiltro
+            if (filtro.Length >= 2)
+                listaFiltrada = listaArticulo.FindAll(art => art.Nombre.ToUpper().Contains(filtro.ToUpper()) || art.Marca.Descripcion.ToUpper().Contains(filtro.ToUpper()) || art.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper()) || art.Descripcion.ToUpper().Contains(filtro.ToUpper()));
+            else
+                listaFiltrada = listaArticulo;
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+
+            validarCeldaSelec();
+            ocultarColumnas();
+        }
+        */
+
+        /*
+        private void cboxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboxCriterio.Items.Clear();
+            if (cboxCampo.SelectedIndex != -1)
+            {
+                string campo = cboxCampo.SelectedItem.ToString();
+                switch (campo)
+                {
+                    case "Precio":
+                        cboxCriterio.Items.Add("Menor a");
+                        cboxCriterio.Items.Add("Mayor a");
+                        cboxCriterio.Items.Add("Igual a");
+                        break;
+                    default:
+                        cboxCriterio.Items.Add("Comienza con");
+                        cboxCriterio.Items.Add("Termina con");
+                        cboxCriterio.Items.Add("Contiene");
+                        break;
+                }
+            }
+            else
+                cboxCriterio.Items.Clear();
+        } */
+        /*
+        private void btnReactivar_Click(object sender, EventArgs e)
+        {
+            FrmReactivarArt activacion = new FrmReactivarArt();
+            activacion.ShowDialog();
+            cargarGrilla();
+        }
+        */
+        /*
+        private void TsMenuAgregarArticulo_Click(object sender, EventArgs e)
+        {
+            FrmAgregar alta = new FrmAgregar();
+            alta.ShowDialog();
+            cargarGrilla();
+        }
+
+        private void TsMenuCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        */
+
+
+        /*
+        private void TsMenuSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        */
+
+        /*
+        private void btnClearFilter_Click(object sender, EventArgs e)
+        {
+            cargarGrilla();
+            txtboxFiltroAvanzado.Text = "";
+            txtboxFiltro.Text = "";
+            cboxCampo.SelectedIndex = -1;
+        }
+        */
+
+        /*
+        private void filtroAv()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            try
+            {
+                if (!Validacion.validarFiltro(cboxCampo, cboxCriterio, txtboxFiltroAvanzado))
+                    return;
+
+                string campo = cboxCampo.SelectedItem.ToString();
+                string criterio = cboxCriterio.SelectedItem.ToString();
+                string filtro = txtboxFiltroAvanzado.Text;
+                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+                validarCeldaSelec();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }*/
+        /*
+        private void txtboxFiltroAvanzado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                filtroAv();
+                e.Handled = true; // evita que se genere el sonido de la tecla Enter
+            }
+        }
+        */
+
+
+        /*
+        private void TsMenuAgregarMarca_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategMarca nuevaMarca = new frmAgregarCategMarca(true);
+            nuevaMarca.ShowDialog();
+        }
+
+        private void TsMenuAgregarCat_Click(object sender, EventArgs e)
+        {
+            frmAgregarCategMarca nuevaCateg = new frmAgregarCategMarca();
+            nuevaCateg.ShowDialog();
+        }
+        */
+        /*
+        private void lblMostrarOcultar_Click(object sender, EventArgs e)
+        {
+            if (listaArticulo.Count > 0 && (dgvArticulos.CurrentRow == null) && lblDescNombre.Text != "Sin coincidencias")
+            {
+                dgvArticulos.Rows[0].Selected = true;
+                dgvArticulos.CurrentCell = dgvArticulos.Rows[0].Cells[2];
+            }
+
+            if (lblDescCodigo.Visible)
+            {
+
+                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.DataBoundItem != null)
+                {
+                    lblDescMarca.Visible = false;
+                    lblDescCodigo.Visible = false;
+                    lblDescDescripcion.Visible = false;
+                    lblDescCateg.Visible = false;
+                    Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    lblDescNombre.Text = articulo.Nombre;
+                }
+                else
+                {
+                    lblDescNombre.Text = "Sin coincidencias";
+                    lblDescCodigo.Text = "";
+                    lblDescMarca.Text = "";
+                    lblDescDescripcion.Text = "";
+                    lblDescPrecio.Text = "";
+                    lblDescCateg.Text = "";
+                }
+
+            }
+            else
+            {
+
+                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.DataBoundItem != null)
+                {
+                    lblDescMarca.Visible = true;
+                    lblDescCodigo.Visible = true;
+                    lblDescDescripcion.Visible = true;
+                    lblDescCateg.Visible = true;
+                    Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    lblDescNombre.Text = "Nombre: " + articulo.Nombre;
+                    lblDescMarca.Text = "Marca: " + articulo.Marca;
+                    lblDescPrecio.Text = "Precio: $" + articulo.Precio.ToString("0.00");
+                    lblDescCodigo.Text = "Código: " + articulo.Codigo;
+                    lblDescDescripcion.Text = "Descripción: " + articulo.Descripcion;
+                    lblDescCateg.Text = "Sector: " + articulo.Categoria.Descripcion;
+                }
+                else
+                {
+                    lblDescNombre.Text = "Sin coincidencias";
+                    lblDescPrecio.Text = "";
+                }
+            }
+        }
+    */
+        /*
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout about = new frmAbout();
+            about.ShowDialog();
+        }
+        */
     }
 }

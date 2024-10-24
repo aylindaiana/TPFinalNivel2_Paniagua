@@ -16,7 +16,7 @@ namespace negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("select Id, Descripcion From MARCAS");
+                datos.SetearConsulta("SELECT Id, Descripcion FROM MARCAS");
                 datos.EjecutarLectura();
                 SqlDataReader lector = datos.Lector;
                 while (lector.Read())

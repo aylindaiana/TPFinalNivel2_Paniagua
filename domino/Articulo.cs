@@ -13,20 +13,17 @@ namespace domino
         public int Id { get; set; }
 
         public string Codigo { get; set; }
-        [DisplayName("Número")]
+        [DisplayName("NÚMERO")]
         public string Nombre { get; set; }
-        [DisplayName("Descripción")]
+        [DisplayName("DESCRIPCIÓN")]
         public string Descripcion { get; set; }
 
-        [DisplayName("Marca")]
+        [DisplayName("MARCA")]
         public Marca TipoMarca { get; set; }
-        [DisplayName("Categoria")]
+        [DisplayName("CATEGORIA")]
         public Categoria TipoCategoria  { get; set; }
-
-        public string ImagenUrl { get; set; }
-
+        [DisplayName("PRECIO")]
         public decimal Precio { get; set; }
-
-        public int Stock {  get; set; }
+        public string ImagenUrl { get; set; }
     }
 }

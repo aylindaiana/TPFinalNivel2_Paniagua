@@ -52,19 +52,19 @@
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAgregar.cs">
+    <Compile Include="FrmAgregarActualizar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAgregar.Designer.cs">
-      <DependentUpon>FrmAgregar.cs</DependentUpon>
+    <Compile Include="FrmAgregarActualizar.Designer.cs">
+      <DependentUpon>FrmAgregarActualizar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregar.resx">
-      <DependentUpon>FrmAgregar.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAgregarActualizar.resx">
+      <DependentUpon>FrmAgregarActualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
