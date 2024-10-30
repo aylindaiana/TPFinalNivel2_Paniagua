@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|c:\\users\\aapan\\downloads\\tpfinalnivel2_paniagua\\tpfinalnivel2_paniagua\\frmagregaractualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|solutionrelative:tpfinalnivel2_paniagua\\frmagregaractualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|c:\\users\\aapan\\downloads\\tpfinalnivel2_paniagua\\tpfinalnivel2_paniagua\\frmagregaractualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|solutionrelative:tpfinalnivel2_paniagua\\frmagregaractualizar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\tpfinalnivel2_paniagua\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|solutionrelative:tpfinalnivel2_paniagua\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B63714EE-F1FD-4CF2-B2CC-67515C1D2160}|negocio\\negocio.csproj|c:\\users\\aapan\\downloads\\tpfinalnivel2_paniagua\\negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B63714EE-F1FD-4CF2-B2CC-67515C1D2160}|negocio\\negocio.csproj|solutionrelative:negocio\\marcanegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B63714EE-F1FD-4CF2-B2CC-67515C1D2160}|negocio\\negocio.csproj|c:\\users\\aapan\\downloads\\tpfinalnivel2_paniagua\\negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B63714EE-F1FD-4CF2-B2CC-67515C1D2160}|negocio\\negocio.csproj|solutionrelative:negocio\\articulonegocio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCBBC639-409B-4206-9613-3397497D7F5D}|TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua.csproj|c:\\users\\aapan\\downloads\\tpfinalnivel2_paniagua\\tpfinalnivel2_paniagua\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,44 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmAgregarActualizar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "RelativeDocumentMoniker": "TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:49:05.362Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "TPFinalNivel2_Paniagua\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FormPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "TPFinalNivel2_Paniagua\\FormPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T17:51:08.024Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmAgregarActualizar.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "RelativeDocumentMoniker": "TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "RelativeToolTip": "TPFinalNivel2_Paniagua\\FrmAgregarActualizar.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAqwCoAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:50:37.516Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
@@ -73,10 +40,48 @@
               "RelativeDocumentMoniker": "TPFinalNivel2_Paniagua\\FormPrincipal.cs",
               "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FormPrincipal.cs",
               "RelativeToolTip": "TPFinalNivel2_Paniagua\\FormPrincipal.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAgwC4AAAAdAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAuwGwAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T22:57:52.729Z",
+              "WhenOpened": "2024-10-30T22:47:31.974Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArticuloNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\negocio\\ArticuloNegocio.cs",
+              "RelativeDocumentMoniker": "negocio\\ArticuloNegocio.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\negocio\\ArticuloNegocio.cs",
+              "RelativeToolTip": "negocio\\ArticuloNegocio.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAoAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T22:44:55.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MarcaNegocio.cs",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\negocio\\MarcaNegocio.cs",
+              "RelativeDocumentMoniker": "negocio\\MarcaNegocio.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\negocio\\MarcaNegocio.cs",
+              "RelativeToolTip": "negocio\\MarcaNegocio.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAlwC8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T22:30:55.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FormPrincipal.cs",
+              "RelativeDocumentMoniker": "TPFinalNivel2_Paniagua\\FormPrincipal.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\TPFinalNivel2_Paniagua\\TPFinalNivel2_Paniagua\\FormPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "TPFinalNivel2_Paniagua\\FormPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T18:40:34.574Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

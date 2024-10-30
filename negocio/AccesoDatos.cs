@@ -10,25 +10,24 @@ namespace negocio
     public class AccesoDatos
     {
         private SqlConnection conexion;
-
         private SqlCommand comando;
         private SqlDataReader lector;
-
-
         public SqlDataReader Lector
         {
             get { return lector; }
         }
-        public AccesoDatos() //creo su constructor
+        public AccesoDatos()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_DB; integrated security=true");
             comando = new SqlCommand();
         }
-        public void SetearConsulta(string Consulta)
+
+        public void SetearConsulta(string consulta)
         {
             comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = Consulta;
+            comando.CommandText = consulta;
         }
+
         public void EjecutarLectura()
         {
             comando.Connection = conexion;
@@ -36,17 +35,17 @@ namespace negocio
             {
                 conexion.Open();
                 lector = comando.ExecuteReader();
-
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
-        public void ejecutarAccion()
+
+        public void EjecutarAccion()
         {
             comando.Connection = conexion;
+
             try
             {
                 conexion.Open();
@@ -57,6 +56,7 @@ namespace negocio
                 throw ex;
             }
         }
+
         public void SetearParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
@@ -64,34 +64,9 @@ namespace negocio
 
         public void CerrarConeccion()
         {
-            if (lector != null) { lector.Close(); }
+            if (lector != null)
+                lector.Close();
             conexion.Close();
-        }
-
-        public object EjecutarEscalar ()
-        {
-            try
-            {
-                if (conexion.State != System.Data.ConnectionState.Open)
-                {
-                    conexion.Open();
-                }
-
-                return comando.ExecuteScalar(); 
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            finally
-            {
-                if (conexion.State == System.Data.ConnectionState.Open)
-                {
-                    conexion.Close();
-                }
-            }
         }
     }
 }

@@ -18,7 +18,7 @@ namespace negocio
 
             try
             {
-                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.ImagenUrl, A.Precio FROM ARTICULOS A inner join MARCAS M ON A.IdMarca = M.Id inner join CATEGORIAS C ON A.IdCategoria = C.Id");
+                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.ImagenUrl, A.Precio FROM ARTICULOS A, MARCAS M, CATEGORIAS C WHERE A.IdMarca = M.Id AND A.IdCategoria = C.Id");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
@@ -28,11 +28,10 @@ namespace negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    
 
                     aux.TipoMarca = new Marca();
                     aux.TipoMarca.Id = (int)datos.Lector["IdMarca"];
-                    aux.TipoMarca.Descipcion = (string)datos.Lector["MarcaDescripcion"];
+                    aux.TipoMarca.Descripcion = (string)datos.Lector["MarcaDescripcion"];
 
                     aux.TipoCategoria = new Categoria();
                     aux.TipoCategoria.Id = (int)datos.Lector["IdCategoria"];
@@ -58,13 +57,14 @@ namespace negocio
                 datos.CerrarConeccion();
             }
         }
+  
 
-        public void agregar(Articulo nuevo)
+        public void Agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, ImagenUrl, IdMarca, IdCategoria, Precio) values (@Codigo, @Nombre, @Descripcion, @ImagenUrl, @IdMarca, @IdCategoria, @Precio)");
+                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " + "VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @ImagenUrl, @Precio)");
                 datos.SetearParametro("@Codigo", nuevo.Codigo);
                 datos.SetearParametro("@Nombre", nuevo.Nombre);
                 datos.SetearParametro("@Descripcion", nuevo.Descripcion);
@@ -73,7 +73,7 @@ namespace negocio
                 datos.SetearParametro("@IdCategoria", nuevo.TipoCategoria.Id);
                 datos.SetearParametro("@Precio", nuevo.Precio);
 
-                datos.ejecutarAccion();
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -85,7 +85,7 @@ namespace negocio
             }
         }
 
-        public void modificar(Articulo existente)
+        public void Modificar(Articulo existente)
         {
             AccesoDatos datos = new AccesoDatos();
             try
@@ -100,7 +100,7 @@ namespace negocio
                 datos.SetearParametro("@Precio", existente.Precio);
                 datos.SetearParametro("@Id", existente.Id);
 
-                datos.ejecutarAccion();
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -120,7 +120,7 @@ namespace negocio
                 datos.SetearConsulta("delete from ARTICULOS where Id=" + id);
                 //datos.setearConsulta("delete from ARTICULOS where Id=@Id");
                 //datos.setearParametro("@Id", id);
-                datos.ejecutarAccion();
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -139,7 +139,7 @@ namespace negocio
             {
                 datos.SetearConsulta("update ARTICULOS set Precio = -Precio Where id=@id");
                 datos.SetearParametro("@id", id);
-                datos.ejecutarAccion();
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {
@@ -232,7 +232,7 @@ namespace negocio
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.TipoMarca = new Marca();
                     aux.TipoMarca.Id = (int)lector["IdMarca"];
-                    aux.TipoMarca.Descipcion = (string)lector["Marca"];
+                    aux.TipoMarca.Descripcion = (string)lector["Marca"];
                     aux.TipoCategoria = new Categoria();
                     aux.TipoCategoria.Id = (int)lector["IdCategoria"];
                     aux.TipoCategoria.Descripcion = (string)lector["Categoria"];

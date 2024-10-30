@@ -18,12 +18,12 @@ namespace negocio
             {
                 datos.SetearConsulta("SELECT Id, Descripcion FROM MARCAS");
                 datos.EjecutarLectura();
-                SqlDataReader lector = datos.Lector;
-                while (lector.Read())
+                
+                while (datos.Lector.Read())
                 {
                     Marca aux = new Marca();
-                    aux.Id = (int)lector["Id"];
-                    aux.Descipcion = (string)lector["Descripcion"];
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
 
                     listaMarcas.Add(aux);
                 }
@@ -38,14 +38,14 @@ namespace negocio
                 datos.CerrarConeccion();
             }
         }
-        public void agregar(Marca nuevo)
+        public void Agregar(string descripcion)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.SetearConsulta("insert into MARCAS (Descripcion) values (@Descripcion)");
-                datos.SetearParametro("@Descripcion", nuevo.Descipcion);
-                datos.ejecutarAccion();
+                datos.SetearParametro("@Descripcion", descripcion);
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {

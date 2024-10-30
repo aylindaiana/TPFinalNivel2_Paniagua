@@ -12,22 +12,22 @@ namespace negocio
     {
         public List<Categoria> Listar()
         {
-            List<Categoria> listaCateg = new List<Categoria>();
+            List<Categoria> listaCategoria = new List<Categoria>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.SetearConsulta("select Id, Descripcion From CATEGORIAS");
                 datos.EjecutarLectura();
-                SqlDataReader lector = datos.Lector;
-                while (lector.Read())
+                
+                while (datos.Lector.Read())
                 {
                     Categoria aux = new Categoria();
-                    aux.Id = (int)lector["Id"];
-                    aux.Descripcion = (string)lector["Descripcion"];
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
 
-                    listaCateg.Add(aux);
+                    listaCategoria.Add(aux);
                 }
-                return listaCateg;
+                return listaCategoria;
             }
             catch (Exception ex)
             {
@@ -38,14 +38,14 @@ namespace negocio
                 datos.CerrarConeccion();
             }
         }
-        public void agregar(Categoria nuevo)
+        public void Agregar(string descripcion)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.SetearConsulta("insert into CATEGORIAS (Descripcion) values (@Descripcion)");
-                datos.SetearParametro("@Descripcion", nuevo.Descripcion);
-                datos.ejecutarAccion();
+                datos.SetearParametro("@Descripcion", descripcion);
+                datos.EjecutarAccion();
             }
             catch (Exception ex)
             {

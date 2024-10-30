@@ -172,12 +172,12 @@ namespace TPFinalNivel2_Paniagua
 
                 if (_Articulo.Id != 0) 
                 {
-                    articuloNegocio.modificar(_Articulo);
+                    articuloNegocio.Modificar(_Articulo);
                     MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
-                    articuloNegocio.agregar(_Articulo);
+                    articuloNegocio.Agregar(_Articulo);
                     MessageBox.Show("Agregado exitosamente");
                 }
 
@@ -214,5 +214,15 @@ namespace TPFinalNivel2_Paniagua
             Close();
         }
 
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtImagenUrl.Text = archivo.FileName;
+                CargarImagen(archivo.FileName);
+            }
+        }
     }
 }
