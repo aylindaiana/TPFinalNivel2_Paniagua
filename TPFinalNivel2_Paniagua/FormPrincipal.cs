@@ -305,7 +305,7 @@ namespace TPFinalNivel2_Paniagua
             List<Articulo> listaFiltrada;
             string filtro = txtBusqueda.Text;
 
-            if (filtro.Length >= 3) // Indico que busque a partir de 3 caracteres
+            if (filtro.Length >= 3)
             {
                 listaFiltrada = listaArticulo.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.TipoCategoria.Descripcion.ToUpper().Contains(filtro.ToUpper()) || x.TipoMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));
             }
@@ -344,91 +344,5 @@ namespace TPFinalNivel2_Paniagua
             frmAturora.ShowDialog();
         }
 
-        /*
-        private void TsMenuAgregarArticulo_Click(object sender, EventArgs e)
-        {
-            FrmAgregar alta = new FrmAgregar();
-            alta.ShowDialog();
-            cargarGrilla();
-        }
-        */
-
-        /*
-        private void TsMenuAgregarMarca_Click(object sender, EventArgs e)
-        {
-            frmAgregarCategMarca nuevaMarca = new frmAgregarCategMarca(true);
-            nuevaMarca.ShowDialog();
-        }
-
-        private void TsMenuAgregarCat_Click(object sender, EventArgs e)
-        {
-            frmAgregarCategMarca nuevaCateg = new frmAgregarCategMarca();
-            nuevaCateg.ShowDialog();
-        }
-        */
-        /*
-        private void lblMostrarOcultar_Click(object sender, EventArgs e)
-        {
-            if (listaArticulo.Count > 0 && (dgvArticulos.CurrentRow == null) && lblDescNombre.Text != "Sin coincidencias")
-            {
-                dgvArticulos.Rows[0].Selected = true;
-                dgvArticulos.CurrentCell = dgvArticulos.Rows[0].Cells[2];
-            }
-
-            if (lblDescCodigo.Visible)
-            {
-
-                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.DataBoundItem != null)
-                {
-                    lblDescMarca.Visible = false;
-                    lblDescCodigo.Visible = false;
-                    lblDescDescripcion.Visible = false;
-                    lblDescCateg.Visible = false;
-                    Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    lblDescNombre.Text = articulo.Nombre;
-                }
-                else
-                {
-                    lblDescNombre.Text = "Sin coincidencias";
-                    lblDescCodigo.Text = "";
-                    lblDescMarca.Text = "";
-                    lblDescDescripcion.Text = "";
-                    lblDescPrecio.Text = "";
-                    lblDescCateg.Text = "";
-                }
-
-            }
-            else
-            {
-
-                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.DataBoundItem != null)
-                {
-                    lblDescMarca.Visible = true;
-                    lblDescCodigo.Visible = true;
-                    lblDescDescripcion.Visible = true;
-                    lblDescCateg.Visible = true;
-                    Articulo articulo = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                    lblDescNombre.Text = "Nombre: " + articulo.Nombre;
-                    lblDescMarca.Text = "Marca: " + articulo.Marca;
-                    lblDescPrecio.Text = "Precio: $" + articulo.Precio.ToString("0.00");
-                    lblDescCodigo.Text = "Código: " + articulo.Codigo;
-                    lblDescDescripcion.Text = "Descripción: " + articulo.Descripcion;
-                    lblDescCateg.Text = "Sector: " + articulo.Categoria.Descripcion;
-                }
-                else
-                {
-                    lblDescNombre.Text = "Sin coincidencias";
-                    lblDescPrecio.Text = "";
-                }
-            }
-        }
-    */
-        /*
-        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAbout about = new frmAbout();
-            about.ShowDialog();
-        }
-        */
     }
 }

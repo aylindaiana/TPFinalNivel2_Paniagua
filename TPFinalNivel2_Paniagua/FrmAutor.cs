@@ -16,5 +16,26 @@ namespace TPFinalNivel2_Paniagua
         {
             InitializeComponent();
         }
+
+        private void pbxGitHub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/aylindaiana");
+        }
+
+        private void pbxLN_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.linkedin.com/in/aylin-paniagua/");
+        }
+
+        private void pbxPortfolio_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://aylindaiana.github.io/Aylin-Portfolio/");
+        }
+
+        private void pbxGmail_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto:aylindaianapaniagua@gmail.com");
+        }
+
     }
 }
