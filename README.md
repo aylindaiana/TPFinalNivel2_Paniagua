@@ -8,3 +8,7 @@ La aplicación de escritorio debe contar conntemplar la administración de Artic
 Etapa 1: Construir las clases necesarias para el modelo de dicha aplicación junto a las ventanas con las que contará y su navegación.
 
 Etapa 2: Construir la interacción con la base de datos y validaciones correspondiente para dar vida a la funcionalidad.
+
+## Demostración
+[![Demostración del proyecto]([https://www.youtube.com/watch?v=abcd1234](https://youtu.be/lvHjjcM-2XU))  
+*(Video mostrando el menú, botones y funcionaliodades)*
