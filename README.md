@@ -9,6 +9,9 @@ Etapa 1: Construir las clases necesarias para el modelo de dicha aplicación jun
 
 Etapa 2: Construir la interacción con la base de datos y validaciones correspondiente para dar vida a la funcionalidad.
 
+## Estado del Proyecto
+Este trabajo práctico está finalizado como parte de un proyecto académico. No se planean nuevas funcionalidades, pero se aceptan sugerencias para mejoras.
+
 ## Demostración
 [![Demostración del proyecto](https://img.youtube.com/vi/lvHjjcM-2XU/0.jpg)](https://www.youtube.com/watch?v=lvHjjcM-2XU)
 *(Video mostrando el menú, botones y funcionaliodades)*
